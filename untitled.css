@@ -1,68 +1,105 @@
-/* ## 版面設計 */
+/* ### 版面設計 ###*/
 
-body{
-	margin: 24px 10px;
-	font-family: Arial
+body {
+    margin: 24px 10px;
+    font-family: Arial, '宋體', sans-serif;
 }
- 
+
+
+
+
+
+
+
+/* L-size bigger than 980px; M-size 640~979px; S-size smaller than 639px */
 
 #site {
-	width:960px;
-	margin:auto;
+    width: 850px;
+    margin: auto;
 }
 
-header{
-	margin-bottom: 10px;
-	overflow: hidden;
+header {
+    margin-bottom: 10px;
+    overflow: hidden;
 }
 
-#topnew{
-	margin-bottom: 30px;
-	overflow:hidden;
+
+
+
+
+
+/* overflow:hidden 將多的區塊隱藏，版面比較好看 */
+
+#topnew {
+    margin-bottom: 75px;
+   overflow: hidden;
 }
 
-#oldernews{
-	margin-bottom: 30px;
-	overflow:hidden;
+#oldernews {
+    margin-bottom: 30px;
+    overflow: hidden;
 }
 
-footer{
-	margin-bottom: 30px;
+.post {
+    float: left;
+    width: 216px;
+    margin-right: 32px;
+    margin-bottom: 25px;
 }
 
-/* ### 細節設計 ###*/
-
-/* HEADER LOGO */
-
-#banner{
-	float: left;
+.post:last-child {
+    margin-right: 0;
 }
 
-#banner h1{
-	margin:0;
+.post+.post+.post+.post {
+    margin-right: 0;
 }
 
-#banner img{
-	vertical-align: bottom;
-	width: 332px;
+
+
+
+
+
+/* ### HEADER LOGO ###*/
+
+#banner {
+    float: left;
 }
 
-nav{
-	float:right;
-	font-size: 15px;
-	font-family: 'Libre Barcode 39 Text', cursive;;
-	padding-top: 30px;
-
+#banner h1 {
+    margin: 0;
 }
 
-nav ul{
-	margin:0;
-	padding:0;
+#banner img {
+    vertical-align: bottom;
+    width: 332px;
 }
 
-nav li{
-	list-style-type:none;
-	float:left;
+
+
+
+
+
+
+
+
+/* ### HEADER NAV ###*/
+
+nav {
+    float: right;
+    font-size: 15px;
+    font-family: 'Maven Pro', Helvetica, 宋體, sans-serif;
+    padding-top: 0px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style-type: none;
+    float: left;
 }
 
 nav li a {
@@ -72,21 +109,39 @@ nav li a {
     margin-top: 20px;
     text-decoration: none;
     border-bottom: solid 3px transparent;
-    color: #000000;
+    color: #FFFFFF;
 }
+
 nav li a:hover {
     border-bottom-color: #ff1e97;
 }
 
+header {
+    overflow: hidden;
+}
+
+
+
+
+
+
+/* ### HEADERPOST 圖片###*/
+
 #topnew img {
     float: left;
     vertical-align: bottom;
-    width: 620px;
+    width: 100%;
 }
+
+
+
+
+/* ### HEADERPOST LEAD###*/
+
 #topnew #lead {
     float: left;
     width: 300px;
-    color: #ffffff;
+    color: #FFFFFF;
     margin-left: 25px;
 }
 
@@ -100,12 +155,8 @@ nav li a:hover {
     text-align: right;
 }
 
-
-
-/* 用CSS寫按鈕!!!這邊先暫且依樣畫葫蘆，之後會教大家Bootstrap，就不用用CSS刻很久了*/
-
 #topnew .more a {
-    color: #ffffff;
+    color: #888888;
     background-image: url(img/more.png);
     background-size: 28px;
     background-repeat: no-repeat;
@@ -115,18 +166,8 @@ nav li a:hover {
     text-decoration: none;
 }
 
-
-
-/* 用CSS做漸層!!!這邊先暫且依樣畫葫蘆，之後會教大家Bootstrap，就不用用CSS刻很久了*/
-
-#htopnew {
-    background-color: #333333;
-    background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#888888));
-    background: -webkit-linear-gradient(#000000 0%, #888888 100%);
-    background: -moz-linear-gradient(#000000 0%, #888888 100%);
-    background: -o-linear-gradient(#000000 0%, #888888 100%);
-    background: -ms-linear-gradient(#000000 0%, #888888 100%);
-    background: linear-gradient(#000000 0%, #888888 100%);
+#topnew {
+    background-color: #FFFFFF;
     overflow: hidden;
 }
 
@@ -135,32 +176,8 @@ nav li a:hover {
 
 
 
-/* POST 圖文 */
 
-
-/* container設960，216x4+32x3=960 */
-
-.post {
-    float: left;
-    width: 216px;
-    margin-right: 32px;
-    margin-bottom: 25px;
-}
-
-
-/* .post:last-child 以後新增的post，只要是最後一個，右邊界皆為0 */
-
-.post:last-child {
-    margin-right: 0;
-}
-
-
-/* 每四個為一組的post，右邊界皆為0 */
-
-.post+.post+.post+.post {
-    margin-right: 0;
-}
-
+/* ### POST 圖文 ###*/
 
 .post img {
     width: 216px;
@@ -217,30 +234,10 @@ nav li a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ### FOOTER ###*/
 
 footer {
-    background-color: #000000;
+    background-color: #DDDDDD;
     padding: 5px;
 }
 
